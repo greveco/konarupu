@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+:root {
+  --lightblue: #5B86EB;
+  --blue: #24355C;
+}
+body {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5vw;
+}
+a,
+a:hover {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bg-lightblue {
+  background: var(--lightblue);
+}
+
+.bg-red {
+  background: var(--blue);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.container-fluid-max {
+  max-width: 1440px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/calafquen.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+.home h1{
+    font-size: 9vw;
+    padding-top: 20vh;
+    text-align:center;
+    text-transform: uppercase;
+    color:#fff;
+}
+.home h1:before{
+    content: attr(data-text);
+    position: absolute;
+    transform-origin:bottom;
+    transform: rotateX(180deg);
+    line-height:1.085em;
+    background: linear-gradient(0deg, #fff, transparent 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.8;
+
+}
+.home .clouds {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.home .clouds img{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(8s * var(--i)) linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        transform: translateX(100%);
+    }
+}
+
+.p-15 {
+  padding: 15px;
+}
+.scroll .page-header {
+  background: var(--blue);
+}
+.container-fluid {
+  padding:0 !important;
+}
+.container-fluid-max{
+  padding:0 !important;
+}
+.page-header .navbar {
+  width: 100%;
+  background-color: rgba(0,0,0, 0.1);
+}
+
+.page-header .navbar-toggler {
+  border-color: var(--white);
+}
+
+@media screen and (max-width: 991px) {
+  .page-header {
+    background: var(--blue);
+  }
+}
+#services li{
+  font-size: 0.7rem;
+  text-align: left;
+}
+#services p{
+  font-size: 0.7rem;
+  text-align: center;
+}
+.popular-destinations figure {
+  margin-bottom: 100px;
+}
+
+.popular-destinations figcaption {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.popular-destinations img {
+  filter: grayscale(100%) blur(3px);
+  transition: transform 0.5s, filter 0.75s;
+}
+
+.popular-destinations a:hover img {
+  transform: scale(1.25);
+  filter: none;
+}
+#contact{
+  background: rgba(91, 134, 235, 0.2);
+  
+}
+.page-footer{
+  margin: 0;
+  padding: 5vh;
+  text-align: center;
+  background: rgba(91, 134, 235, 0.2);
+}
+.page-footer .footer-links {
+  text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  .page-footer .footer-child {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .page-header {
+    background: var(--blue);
+  }
+}
